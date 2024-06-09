@@ -13,6 +13,7 @@ import { HeaderPage } from '../header/header.page';
 export class Tab1Page implements OnInit {
   constructor() {}
 
+  lives = 2
   ngOnInit(): void {
 
     const input:any = document.getElementById('input')
@@ -23,6 +24,8 @@ export class Tab1Page implements OnInit {
     const letter5:any = document.getElementById('letter5')
     const letter6:any = document.getElementById('letter6')
     const letter7:any = document.getElementById('letter7')
+
+ 
       
     input.addEventListener("keypress", (event: { key: string; }) => {
 
@@ -33,7 +36,7 @@ export class Tab1Page implements OnInit {
           letter1.style.visibility = "visible"
           letter1.style.color = "green"
           input.value = ""
-          
+
         }
 
         else if(input.value.toUpperCase() == letter2.innerHTML) {
@@ -87,6 +90,8 @@ export class Tab1Page implements OnInit {
         else if(input.value.length > 1 || input.value.length == 0 || input.value.toUpperCase() != letter1.innerHTML && input.value.toUpperCase() != letter2.innerHTML && input.value.toUpperCase() != letter3.innerHTML && input.value.toUpperCase() != letter4.innerHTML && input.value.toUpperCase() != letter5.innerHTML && input.value.toUpperCase() != letter6.innerHTML && input.value.toUpperCase() != letter7.innerHTML) {
 
           input.style.border = "1px solid red"
+          this.lives -= 1
+
 
           setTimeout(() => {
             
@@ -94,6 +99,17 @@ export class Tab1Page implements OnInit {
             input.value = ""
 
           }, 2000);
+
+        }
+
+        if(this.lives == 0) {
+
+
+
+          setTimeout(() => {
+            window.location.reload()
+          }, 2000);
+           
 
         }
 
