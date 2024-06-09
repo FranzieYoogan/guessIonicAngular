@@ -1,0 +1,43 @@
+.containerAll {
+
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+ 
+}
+
+.letterStyle {
+
+    font-size: 40px;
+    visibility: hidden;
+}
+
+.containerLetter {
+
+border-bottom: 2px solid red;
+margin-top: 5em;
+margin-bottom: 5em;
+}
+
+.containerPokemon {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+
+}
+
+.inputStyle {
+
+    border-radius: 10px;
+    border: 1px solid burlywood;
+    width: 50px;
+
+}
+
+.inputStyle:active, .inputStyle:focus {
+
+    box-shadow: none !important;
+    border: 1px solid burlywood;
+
+}
