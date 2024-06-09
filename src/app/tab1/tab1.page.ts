@@ -32,62 +32,74 @@ export class Tab1Page implements OnInit {
 
           letter1.style.visibility = "visible"
           letter1.style.color = "green"
-
+          input.value = ""
+          
         }
 
-        if(input.value.toUpperCase() == letter2.innerHTML) {
+        else if(input.value.toUpperCase() == letter2.innerHTML) {
 
           letter2.style.visibility = "visible"
           letter2.style.color = "green"
+          input.value = ""
 
         }
 
-        if(input.value.toUpperCase() == letter3.innerHTML) {
+       else if(input.value.toUpperCase() == letter3.innerHTML) {
 
           letter3.style.visibility = "visible"
           letter3.style.color = "green"
+          input.value = ""
 
         }
 
-        if(input.value.toUpperCase() == letter4.innerHTML) {
+        else if(input.value.toUpperCase() == letter4.innerHTML) {
 
           letter4.style.visibility = "visible"
           letter4.style.color = "green"
+          input.value = ""
 
         }
 
-        if(input.value.toUpperCase() == letter5.innerHTML) {
+        else if(input.value.toUpperCase() == letter5.innerHTML) {
 
           letter5.style.visibility = "visible"
           letter5.style.color = "green"
-
+          input.value = ""
         }
 
-        if(input.value.toUpperCase() == letter6.innerHTML) {
+       else if(input.value.toUpperCase() == letter6.innerHTML) {
 
           letter6.style.visibility = "visible"
           letter6.style.color = "green"
-
+          input.value = ""
         }
 
-        if(input.value.toUpperCase() == letter7.innerHTML) {
+        else if(input.value.toUpperCase() == letter7.innerHTML) {
 
           letter7.style.visibility = "visible"
           letter7.style.color = "green"
+          input.value = ""
 
-        }
+        } 
 
-        if(input.value.length > 1 || input.value.length == 0) {
+      
+
+        else if(input.value.length > 1 || input.value.length == 0 || input.value.toUpperCase() != letter1.innerHTML && input.value.toUpperCase() != letter2.innerHTML && input.value.toUpperCase() != letter3.innerHTML && input.value.toUpperCase() != letter4.innerHTML && input.value.toUpperCase() != letter5.innerHTML && input.value.toUpperCase() != letter6.innerHTML && input.value.toUpperCase() != letter7.innerHTML) {
 
           input.style.border = "1px solid red"
 
+          setTimeout(() => {
+            
+            input.style.border = "1px solid burlywood"
+            input.value = ""
+
+          }, 2000);
+
         }
 
-        if(input.value.length == 1) {
+       
 
-          input.style.border = "1px solid burlywood"
 
-        }
 
       }
 
